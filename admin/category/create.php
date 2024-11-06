@@ -1,6 +1,24 @@
-<?php ?>
+<?php
+require_once '../../functions/helpers.php';
+require_once '../../functions/connection.php';
+
+if (isset($_POST["name"]) && $_POST["name"] != "") {
+    global $pdo;
+    /*
+    $query = 'INSERT INTO categories (name) VALUES (:name)';
+    $statement = $pdo->prepare($query);
+    $statement->bindValue(':name', $_POST["name"]);
+    $statement->execute();
+    redirect('admin/category');
+    */
+    $query = 'INSERT INTO categories set name = ?, created_at = NOW();';
+    $Statement = $pdo->prepare($query);
+    $Statement->execute([$_POST["name"]]);
+    redirect('admin/category');
+    }
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -12,14 +30,15 @@
 
 <body>
 <section id="app">
-
+    <?php require_once '../layouts/top-nav.php'; ?>
     <section class="container-fluid">
         <section class="row">
             <section class="col-md-2 p-0">
+                <?php require_once '../layouts/sidebar.php'; ?>
             </section>
             <section class="col-md-10 pt-3">
 
-                <form action="create.php" method="post">
+                <form action="<?= url('admin/category/create.php') ?>" method="post">
                     <section class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="name ...">

@@ -2,12 +2,12 @@
     <link rel="stylesheet" href="../../assets/css/style.css" media="all" type="text/css">
 <section class="sidebar">
     <section class="sidebar-link">
-        <a href="">panel</a>
+        <a href="<?= url('admin') ?>">پنل مدیریت</a>
     </section>
     <section class="sidebar-link">
-        <a href="">category</a>
+        <a href="<?= url('admin/category') ?>">دسته بندی ها</a>
     </section>
     <section class="sidebar-link">
-        <a href="">post</a>
+        <a href="<?= url('admin/post') ?>">پست ها</a>
     </section>
 </section>
