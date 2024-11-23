@@ -1,7 +1,7 @@
 <?php
     require_once '../functions/helpers.php';
 ?>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,11 +22,11 @@
 
                 <section style="min-height: 80vh;" class="d-flex justify-content-center align-items-center">
                     <section>
-                        <h1>PHP Tutorial</h1>
+                        <h1>به داشبورد مدیریت خوش آمدید</h1>
                         <ul class="mt-2 li">
-                            <li><h3>PDO Connection</h3></li>
-                            <li><h3>File upload</h3></li>
-                            <li><h3>Blog (categories and posts)</h3></li>
+                            <li><h3>نوشته ها</h3></li>
+                            <li><h3>ویرایش نوشته ها</h3></li>
+                            <li><h3>حذف نوشته ها</h3></li>
                         </ul>
                     </section>
                 </section>
