@@ -1,6 +1,7 @@
 <?php
 require_once '../../functions/helpers.php';
 require_once '../../functions/connection.php';
+require_once '../../functions/check-login.php';
 
 if (isset($_POST["title"]) && $_POST["title"] != '' &&
     isset($_POST["cate_id"]) && $_POST["cate_id"] != '' &&

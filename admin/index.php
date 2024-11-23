@@ -1,5 +1,6 @@
 <?php
     require_once '../functions/helpers.php';
+    require_once '../functions/check-login.php';
 ?>
 <html lang="fa" dir="rtl">
 <head>
